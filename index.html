@@ -389,6 +389,84 @@ button{
   background:#ff7ba6;
 }
 
+/* VIDEO INTRO — premium editorial film opening */
+.video-intro{
+  min-height:78vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+  padding:22px 22px 30px;
+  margin:0 0 34px;
+  border:1px solid rgba(225,205,151,.25);
+  border-radius:2px;
+  overflow:hidden;
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse at 18% 12%,rgba(194,181,126,.22),transparent 31%),
+    radial-gradient(ellipse at 84% 78%,rgba(73,139,125,.20),transparent 38%),
+    radial-gradient(ellipse at 50% 48%,rgba(255,255,255,.035),transparent 46%),
+    linear-gradient(145deg,#293221 0%,#102a25 42%,#06211d 100%);
+  box-shadow:inset 0 0 90px rgba(0,0,0,.16),0 35px 100px rgba(0,0,0,.25);
+}
+.video-intro:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  opacity:.42;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:70px 70px;
+  mask-image:linear-gradient(to bottom,black,transparent 90%);
+  pointer-events:none;
+}
+.video-intro:after{
+  content:"";
+  position:absolute;
+  inset:9px;
+  border:1px solid rgba(255,255,255,.075);
+  pointer-events:none;
+}
+.video-intro-top,.video-intro-content,.video-intro-bottom{position:relative;z-index:2}
+.video-intro-top{display:flex;justify-content:space-between;align-items:flex-start;padding:2px 6px}
+.video-intro-brand{font-family:"Playfair Display",serif;font-size:25px;font-weight:600;letter-spacing:.025em;color:#f0eee7}
+.video-intro-date{font-size:13px;letter-spacing:.20em;color:rgba(255,255,255,.86);padding-top:5px}
+.video-intro-content{text-align:center;padding:30px 20px 20px;transform:translateY(-2vh)}
+.video-intro-kicker{display:inline-flex;align-items:center;gap:14px;color:#d9bf87;font-size:12px;letter-spacing:.42em;text-transform:uppercase;margin-bottom:30px}
+.video-intro-kicker:before,.video-intro-kicker:after{content:"";width:34px;height:1px;background:rgba(217,191,135,.6)}
+.video-intro h2{font-family:"Playfair Display",serif;font-size:clamp(58px,8.7vw,112px);line-height:.88;margin:0;font-weight:500;letter-spacing:-.055em;color:#f7f3ea;text-wrap:balance;text-shadow:0 10px 40px rgba(0,0,0,.16)}
+.video-intro h2 em{display:block;color:#d9bb7e;font-weight:500;font-style:italic;margin-top:9px}
+.video-intro-subtitle{margin:34px 0 0;color:rgba(255,255,255,.70);font-size:16px;letter-spacing:.08em}
+.video-intro-rule{width:min(170px,35vw);height:1px;margin:28px auto 0;background:linear-gradient(90deg,transparent,rgba(217,191,135,.65),transparent)}
+.video-intro-bottom{text-align:center;color:rgba(255,255,255,.52);font-size:10px;letter-spacing:.48em;text-transform:uppercase}
+.video-intro-scroll-line{width:1px;height:42px;margin:0 auto 15px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.7),transparent)}
+.video-intro-watch{font-size:10px;letter-spacing:.48em}
+.video-frame{
+  position:relative;
+  padding:10px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.025);
+  box-shadow:0 40px 110px rgba(0,0,0,.35);
+}
+.video-frame:before{content:"";position:absolute;inset:4px;border:1px solid rgba(217,191,135,.16);pointer-events:none;z-index:2}
+.video-frame .video-card{border-radius:0;position:relative;z-index:1}
+@media(max-width:700px){
+  .video-intro{min-height:72vh;padding:18px 14px 24px;margin-bottom:26px}
+  .video-intro-top{padding:2px 4px}
+  .video-intro-brand{font-size:21px}
+  .video-intro-date{font-size:10px;letter-spacing:.14em}
+  .video-intro-content{padding:30px 8px 20px;transform:none}
+  .video-intro-kicker{font-size:9px;letter-spacing:.27em;gap:8px;margin-bottom:24px}
+  .video-intro-kicker:before,.video-intro-kicker:after{width:20px}
+  .video-intro h2{font-size:clamp(48px,14vw,76px)}
+  .video-intro-subtitle{margin-top:27px;font-size:13px}
+  .video-intro-rule{margin-top:23px}
+  .video-intro-bottom{font-size:9px}
+  .video-frame{padding:6px}
+}
+
 /* VIDEO */
 
 .video-card{
@@ -677,6 +755,10 @@ button{
         A Letter
       </a>
 
+      <a href="game.html">
+        Our Game ✦
+      </a>
+
     </div>
 
   </div>
@@ -695,7 +777,7 @@ button{
     <div class="hero-inner">
 
       <div class="eyebrow">
-        A little something I made for you · 20/September
+        A little something I made for you · 20/SEPTEMBER
       </div>
 
       <div class="hero-heart">
@@ -714,8 +796,8 @@ button{
 
       <p class="hero-copy">
 
-        I could have planned a date.
-        But, i want to do something different, Tumhare wala alag h na!
+        I could have bought you a gift.
+        Instead, I wanted to make you one.
 
         Every photo, every memory and every little detail
         on this page is here to celebrate the story
@@ -737,6 +819,13 @@ button{
           href="#memories"
         >
           See our memories →
+        </a>
+
+        <a
+          class="btn secondary"
+          href="game.html"
+        >
+          Play our little game ✦
         </a>
 
       </div>
@@ -903,7 +992,11 @@ button{
 
       <p>
 
-        
+        Swipe or drag the gallery,
+        tap a side photo, or use the arrows.
+
+        The center photo comes forward
+        in a cinematic 3D cover-flow transition.
 
       </p>
 
@@ -920,7 +1013,7 @@ button{
         <div class="slide">
 
           <img
-            src="img1.JPG"
+            src="img1.jpg"
             alt="Memory 1"
             draggable="false"
           >
@@ -935,7 +1028,7 @@ button{
         <div class="slide">
 
           <img
-            src="img2.JPG"
+            src="img2.jpg"
             alt="Memory 2"
             draggable="false"
           >
@@ -956,7 +1049,7 @@ button{
           >
 
           <div class="slide-caption">
-          
+            
           </div>
 
         </div>
@@ -965,13 +1058,13 @@ button{
         <div class="slide">
 
           <img
-            src="img4.JPG"
+            src="img4.jpg"
             alt="Memory 4"
             draggable="false"
           >
 
           <div class="slide-caption">
-          
+           
           </div>
 
         </div>
@@ -986,7 +1079,7 @@ button{
           >
 
           <div class="slide-caption">
-           
+          
           </div>
 
         </div>
@@ -1001,7 +1094,7 @@ button{
           >
 
           <div class="slide-caption">
-           
+      
           </div>
 
         </div>
@@ -1016,7 +1109,7 @@ button{
           >
 
           <div class="slide-caption">
-    
+       
           </div>
 
         </div>
@@ -1060,88 +1153,48 @@ button{
 </section>
 
 
-<!-- VIDEO -->
-
-<section
-  class="section reveal"
-  id="video"
->
-
+<!-- VIDEO / FILM -->
+<section class="section reveal" id="video">
   <div class="site">
 
-    <div class="section-header">
-
-      <div class="kicker">
-        Chapter Three
+    <div class="video-intro">
+      <div class="video-intro-top">
+        <div class="video-intro-brand">For Her</div>
+        <div class="video-intro-date">25 · IX · MMXXVI</div>
       </div>
 
-      <h2>
+      <div class="video-intro-content">
+        <div class="video-intro-kicker">A year, celebrated</div>
+        <h2>Happy Birthday,<br><em>Beautiful</em></h2>
+        <div class="video-intro-subtitle">Written for you, on your day</div>
+        <div class="video-intro-rule"></div>
+      </div>
 
-        A little You.<br>
-
-      </h2>
-
-      <p>
-
-        Put your video in the same folder
-        as this file and name it
-        <strong>video1.mp4</strong>.
-
-      </p>
-
+      <div class="video-intro-bottom">
+        <div class="video-intro-scroll-line"></div>
+        <div class="video-intro-watch">Watch</div>
+      </div>
     </div>
 
-
-    <div class="video-card">
-
-      <div class="video-wrap">
-
-        <video
-          controls
-          playsinline
-          preload="metadata"
-          poster="img1.jpg"
-        >
-
-          <source
-            src="video1.mp4"
-            type="video/mp4"
-          >
-
-          Your browser does not support
-          the video element.
-
-        </video>
-
-      </div>
-
-
-      <div class="video-note">
-
-        <div>
-
-          <strong>
-            Pretty woman 🎬
-          </strong>
-
-          <br>
-
-          <span>
-            A memory I wanted you to be able to replay.
-          </span>
-
+    <div class="video-frame">
+      <div class="video-card">
+        <div class="video-wrap">
+          <video controls playsinline preload="metadata" poster="img1.jpg">
+            <source src="video1.mp4" type="video/mp4">
+           
+          </video>
         </div>
-
-        <span>
-          video1.mp4
-        </span>
-
+        <div class="video-note">
+          <div>
+            <strong>A little Celebration 🎬</strong><br>
+            <span>A memory I wanted you to be able to replay.</span>
+          </div>
+          <span>you and you · 01</span>
+        </div>
       </div>
-
     </div>
 
   </div>
-
 </section>
 
 
@@ -1428,7 +1481,7 @@ button{
         I want to say,
 
         but I wanted to make you something
-        rather than doing something simple.
+        rather than simply buy you something.
 
       </p>
 
@@ -2082,4 +2135,3 @@ button{
 
 </body>
 </html>
-
