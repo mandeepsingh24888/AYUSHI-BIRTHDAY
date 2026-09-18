@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ayushi ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,serif;background:#fff7fa;color:#351522}
+.page{max-width:900px;margin:auto;padding:24px}
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.hero-inner{padding:50px 24px;border:1px solid #f2ccd9;border-radius:32px;background:linear-gradient(145deg,#fff0f6,#fff8ed);box-shadow:0 15px 50px rgba(120,30,70,.08);width:100%}
+.heart{font-size:72px;animation:beat 1.5s infinite}.spark{position:absolute;color:#db2777;font-size:24px;animation:float 4s ease-in-out infinite}.a{left:10%;top:18%}.b{right:12%;top:30%}.c{left:20%;bottom:18%}.d{right:18%;bottom:14%}
+h1{font-size:clamp(42px,9vw,76px);line-height:.98;margin:18px 0;color:#351522}.pink{color:#db2777}
+.lead{font-size:19px;line-height:1.7;color:#795968;max-width:650px;margin:0 auto 30px}
+button{border:0;border-radius:999px;padding:15px 26px;background:#db2777;color:#fff;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 8px 20px rgba(219,39,119,.18)}
+button.alt{background:#fce7f3;color:#db2777;box-shadow:none}
+section.card{margin:22px 0;padding:30px;border:1px solid #f2ccd9;border-radius:26px;background:#fffafb}
+h2{font-size:30px;margin:0 0 18px}.muted{color:#795968;line-height:1.7}
+.timeline{display:grid;gap:14px}.memory{display:grid;grid-template-columns:100px 1fr;gap:18px;padding:20px;border:1px solid #f3d7e1;border-radius:18px;background:#fff}
+.date{font-weight:bold;color:#db2777}.memory p{margin:7px 0;color:#795968;line-height:1.55}
+.reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.reason{padding:19px;border-radius:18px;background:#fff;border:1px solid #f3d7e1;line-height:1.5}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.photo{aspect-ratio:1;border:2px dashed #e9b9ca;border-radius:20px;background:#fff1f6;display:flex;align-items:center;justify-content:center;text-align:center;color:#9a6879;padding:12px}
+.letter{padding:25px;background:#fff;border-radius:20px;border:1px solid #f3d7e1;line-height:1.9;font-size:17px}
+.secret{text-align:center}.secretbox{margin-top:18px;padding:25px;border:1px dashed #db2777;border-radius:20px;background:#fff;line-height:1.8;font-size:18px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.stat{text-align:center;background:#fff;padding:18px;border-radius:18px;border:1px solid #f3d7e1}.stat strong{display:block;font-size:29px;color:#db2777}.stat span{font-size:13px;color:#795968}
+footer{text-align:center;color:#9a6879;padding:25px}
+.hidden{display:none!important}
+@keyframes beat{50%{transform:scale(1.12)}}@keyframes float{50%{transform:translateY(-12px) rotate(5deg)}}
+@media(max-width:600px){.page{padding:12px}.hero-inner{padding:40px 18px}.photos{grid-template-columns:1fr 1fr}.memory{grid-template-columns:1fr;gap:7px}.stats{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.heart,.spark{animation:none}}
+
+/* --- Birthday animations --- */
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+.hero-inner { animation: heroIn 1.2s ease-out both; }
+.heart { animation: heartbeat 1.5s ease-in-out infinite, heartFloat 4s ease-in-out infinite; }
+.spark { animation: float 4s ease-in-out infinite, twinkle 2.4s ease-in-out infinite alternate; }
+#story .card { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+#story .card.visible { opacity: 1; transform: translateY(0); }
+.memory, .reason, .photo, .stat { transition: transform .3s ease, box-shadow .3s ease; }
+.memory:hover, .reason:hover, .photo:hover, .stat:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(120,30,70,.10); }
+.secretbox { animation: revealBox .7s ease both; }
+.cursor { display:inline-block; width:2px; height:1em; margin-left:3px; background:currentColor; vertical-align:-2px; animation:blink .8s steps(1) infinite; }
+.floating-heart { position:fixed; bottom:-40px; pointer-events:none; z-index:9999; animation:rise linear forwards; }
+.confetti { position:fixed; top:-20px; width:8px; height:14px; pointer-events:none; z-index:10000; animation:confettiFall linear forwards; }
+@keyframes heroIn { from{opacity:0;transform:translateY(20px) scale(.98)} to{opacity:1;transform:translateY(0) scale(1)} }
+@keyframes heartFloat { 0%,100%{margin-top:0} 50%{margin-top:-8px} }
+@keyframes twinkle { from{opacity:.35} to{opacity:1} }
+@keyframes blink { 50%{opacity:0} }
+@keyframes revealBox { from{opacity:0;transform:scale(.95) translateY(12px)} to{opacity:1;transform:scale(1) translateY(0)} }
+@keyframes rise { from{opacity:0;transform:translateY(0) translateX(0) rotate(0)} 15%{opacity:1} to{opacity:0;transform:translateY(-110vh) translateX(var(--drift)) rotate(360deg)} }
+@keyframes confettiFall { from{opacity:1;transform:translateY(0) rotate(0)} to{opacity:0;transform:translateY(110vh) rotate(720deg)} }
+@media (prefers-reduced-motion:reduce) {
+  html{scroll-behavior:auto}
+  .hero-inner,.heart,.spark,.secretbox{animation:none!important}
+  #story .card{opacity:1;transform:none;transition:none}
+  .floating-heart,.confetti{display:none!important}
+}
+
+
+/* 3D BACKGROUND */
+body{background:#120713;position:relative;min-height:100vh;isolation:isolate}
+body::before{content:"";position:fixed;inset:-20%;z-index:-4;pointer-events:none;background:radial-gradient(circle at 20% 20%,rgba(236,72,153,.20),transparent 32%),radial-gradient(circle at 80% 30%,rgba(168,85,247,.18),transparent 28%),radial-gradient(circle at 50% 90%,rgba(244,114,182,.13),transparent 35%),linear-gradient(135deg,#120713 0%,#241021 50%,#140913 100%);transform:translateZ(0)}
+body::after{content:"";position:fixed;inset:-10%;z-index:-3;pointer-events:none;opacity:.75;background-image:radial-gradient(circle at 10% 20%,rgba(255,255,255,.22) 0 1px,transparent 2px),radial-gradient(circle at 70% 15%,rgba(255,255,255,.16) 0 1px,transparent 2px),radial-gradient(circle at 85% 70%,rgba(255,255,255,.18) 0 1px,transparent 2px),radial-gradient(circle at 30% 80%,rgba(255,255,255,.12) 0 1px,transparent 2px);background-size:260px 260px,340px 340px,300px 300px,380px 380px;animation:starDrift 28s linear infinite}
+.page{position:relative;z-index:1}
+.hero{perspective:1200px}
+.hero-inner{position:relative;transform-style:preserve-3d;background:linear-gradient(145deg,rgba(255,241,247,.92),rgba(255,248,237,.88));backdrop-filter:blur(8px);box-shadow:0 35px 90px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.75);transition:transform .15s ease-out}
+.hero-inner::before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.65);border-radius:24px;transform:translateZ(30px);pointer-events:none}
+.card{background:rgba(255,250,252,.92)!important;backdrop-filter:blur(8px);box-shadow:0 18px 50px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.72);transform-style:preserve-3d}
+.big-depth-orb{position:fixed;pointer-events:none;border-radius:50%;filter:blur(2px);z-index:-2;mix-blend-mode:screen}
+.orb1{width:240px;height:240px;left:-70px;top:18vh;background:radial-gradient(circle at 35% 35%,rgba(244,114,182,.35),rgba(219,39,119,.02) 70%);animation:orbFloat1 12s ease-in-out infinite}
+.orb2{width:310px;height:310px;right:-100px;top:48vh;background:radial-gradient(circle at 40% 35%,rgba(167,139,250,.28),rgba(124,58,237,.02) 72%);animation:orbFloat2 15s ease-in-out infinite}
+.orb3{width:180px;height:180px;left:42%;top:70vh;background:radial-gradient(circle at 35% 35%,rgba(251,191,36,.16),transparent 72%);animation:orbFloat3 11s ease-in-out infinite}
+@keyframes starDrift{from{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-10px,14px,0) scale(1.03)}to{transform:translate3d(0,0,0) scale(1)}}
+@keyframes orbFloat1{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(70px,-35px,80px) scale(1.12)}}
+@keyframes orbFloat2{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-65px,40px,-50px) scale(.9)}}
+@keyframes orbFloat3{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(30px,-55px,40px) scale(1.18)}}
+@media (prefers-reduced-motion:reduce){body::after,.orb1,.orb2,.orb3{animation:none}.hero-inner{transform:none!important}}
+
+
+/* --- 3D Memories Carousel --- */
+.memories-3d{position:relative;overflow:hidden}
+.memory-intro{text-align:center;margin-top:-4px}
+.memory-stage{perspective:1400px;margin:22px auto 8px;max-width:760px}
+.memory-frame{position:relative;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .45s ease;will-change:transform}
+.memory-glow{position:absolute;inset:9% 8% 12%;border-radius:30px;background:radial-gradient(circle at center,rgba(219,39,119,.24),transparent 65%);filter:blur(24px);transform:translateZ(-55px) scale(.95);pointer-events:none}
+.memory-image-wrap{position:relative;aspect-ratio:16/10;border-radius:30px;overflow:hidden;border:1px solid rgba(255,255,255,.55);background:linear-gradient(135deg,#ffe7f1,#fff7ec);box-shadow:0 28px 70px rgba(50,15,30,.22);transform:rotateX(2deg)}
+.memory-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#7b5362;background:
+  radial-gradient(circle at 18% 18%,rgba(255,255,255,.85),transparent 26%),
+  radial-gradient(circle at 84% 78%,rgba(219,39,119,.12),transparent 25%),
+  linear-gradient(135deg,#fff1f6,#fff9ef)}
+.memory-icon{font-size:68px;filter:drop-shadow(0 8px 14px rgba(219,39,119,.18));margin-bottom:12px}
+.memory-label{font-size:28px;font-weight:800;color:#351522}
+.memory-placeholder small{margin-top:8px;color:#866170;font-size:14px}
+.memory-caption{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;margin:14px 4px 0}
+.memory-count{font-size:13px;font-weight:800;color:#db2777;background:#fce7f3;border:1px solid #f3cbdc;border-radius:999px;padding:7px 10px;white-space:nowrap}
+.memory-caption strong{font-size:18px;color:#351522}
+.memory-caption p{margin:5px 0 0;color:#795968;line-height:1.5}
+.memory-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:18px}
+.memory-nav{width:48px;height:48px;padding:0;border-radius:50%;display:grid;place-items:center;background:#fff;color:#db2777;border:1px solid #efc8d8;box-shadow:0 8px 20px rgba(120,30,70,.08)}
+.memory-nav:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(120,30,70,.12)}
+.memory-dots{display:flex;gap:7px;align-items:center;justify-content:center}
+.memory-dot{width:9px;height:9px;border:0;border-radius:50%;padding:0;min-height:9px;background:#efcbd8;box-shadow:none}
+.memory-dot.active{width:24px;border-radius:999px;background:#db2777}
+.memory-note{text-align:center;color:#98707f;font-size:12px;margin-top:12px}
+.memory-frame.slide-next{animation:memoryNext .65s ease}
+.memory-frame.slide-prev{animation:memoryPrev .65s ease}
+@keyframes memoryNext{
+  0%{opacity:.45;transform:translateX(46px) rotateY(-10deg) rotateX(2deg) scale(.97)}
+  55%{opacity:1;transform:translateX(-8px) rotateY(4deg) rotateX(2deg) scale(1.01)}
+  100%{opacity:1;transform:translateX(0) rotateY(0) rotateX(2deg) scale(1)}
+}
+@keyframes memoryPrev{
+  0%{opacity:.45;transform:translateX(-46px) rotateY(10deg) rotateX(2deg) scale(.97)}
+  55%{opacity:1;transform:translateX(8px) rotateY(-4deg) rotateX(2deg) scale(1.01)}
+  100%{opacity:1;transform:translateX(0) rotateY(0) rotateX(2deg) scale(1)}
+}
+@media(max-width:600px){
+  .memory-image-wrap{aspect-ratio:4/3;border-radius:24px}
+  .memory-label{font-size:23px}
+  .memory-icon{font-size:54px}
+  .memory-caption{grid-template-columns:1fr;gap:9px}
+  .memory-count{width:max-content}
+}
+@media(prefers-reduced-motion:reduce){
+  .memory-frame{transition:none}
+  .memory-frame.slide-next,.memory-frame.slide-prev{animation:none}
+}
+
+</style>
+</head>
+<body><div class="big-depth-orb orb1"></div><div class="big-depth-orb orb2"></div><div class="big-depth-orb orb3"></div>
+<div class="page">
+<div class="hero">
+<span class="spark a">✦</span><span class="spark b">♡</span><span class="spark c">✧</span><span class="spark d">♡</span>
+<div class="hero-inner">
+<div class="heart">❤️</div>
+<h1>Happy Birthday,<br><span class="pink">Ayushi</span></h1>
+<div style="font-weight:800;color:#db2777;font-size:17px;margin:4px 0 12px">20 September 🎂</div>
+<p class="lead">I could have simply bought you a gift… but I wanted to make you something instead. So I made this little corner of the internet just for you.</p>
+<button id="open">I made something for you 💌</button>
+</div></div>
+
+<main id="story" class="hidden">
+<section class="card">
+<h2>🗓️ Where It All Began</h2>
+<p class="muted">Our story began on <strong>29 August 2022</strong>. 29 August 2022 was the day we met for the first time. From that first meeting came countless little moments that became our story.</p>
+<div class="stats"><div class="stat"><strong>29 Aug</strong><span>The day we met</span></div><div class="stat"><strong>20 Sep</strong><span>Ayushi’s Birthday 🎂</span></div><div class="stat"><strong>∞</strong><span>Memories ahead</span></div></div>
+</section>
+
+<section class="card">
+<h2>📖 Our Story</h2>
+<div class="timeline">
+<div class="memory"><div class="date">29 Aug<br>2022</div><div><strong>The Day We Met ❤️</strong><p>The first time we met — the day our story really began.</p></div></div>
+<div class="memory"><div class="date">Chapter 2</div><div><strong>The Little Things</strong><p>The conversations, jokes, random moments and memories that slowly made you such an important part of my life.</p></div></div>
+<div class="memory"><div class="date">20 Sep<br>Every Year</div><div><strong>Ayushi’s Birthday 🎂</strong><p>Today is about celebrating you — the person who makes ordinary moments feel a little more special.</p></div></div>
+<div class="memory"><div class="date">Next ✨</div><div><strong>Everything Ahead</strong><p>More adventures, more pictures, more laughter, more stupid jokes and more memories for us to make.</p></div></div>
+</div>
+</section>
+
+<section class="card memories-3d">
+<h2>📸 Our Memories</h2>
+<p class="muted memory-intro">One memory at a time. Replace these placeholders with your favorite photos together.</p>
+
+<div class="memory-stage" id="memoryStage" aria-live="polite">
+  <div class="memory-frame">
+    <div class="memory-glow"></div>
+    <div class="memory-image-wrap">
+      <div class="memory-placeholder" id="memoryPlaceholder">
+        <div class="memory-icon">📷</div>
+        <div class="memory-label" id="memoryLabel">Our favorite photo</div>
+        <small id="memoryHint">Replace this with your first picture ❤️</small>
+      </div>
+    </div>
+    <div class="memory-caption">
+      <div class="memory-count" id="memoryCount">01 / 06</div>
+      <div>
+        <strong id="memoryTitle">Our favorite photo</strong>
+        <p id="memoryText">The first picture in our little collection of memories.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="memory-controls">
+  <button class="memory-nav" id="memoryPrev" type="button" aria-label="Previous memory">←</button>
+  <div class="memory-dots" id="memoryDots"></div>
+  <button class="memory-nav" id="memoryNext" type="button" aria-label="Next memory">→</button>
+</div>
+
+<div class="memory-note">Tip: when you're ready, replace the six placeholder images in the HTML with your real photos. ❤️</div>
+</section>
+
+<section class="card"><h2>💗 Things I Love About You</h2>
+<div class="reasons">
+<div class="reason">Your smile — especially when you don't realize you're smiling. 😊</div>
+<div class="reason">The way you make ordinary moments feel special.</div>
+<div class="reason">Your little habits that somehow became my favorite things.</div>
+<div class="reason">How easily we can be silly together. 😂</div>
+<div class="reason">The person you are when nobody is watching.</div>
+<div class="reason">And simply… you being you. ❤️</div>
+</div>
+</section>
+
+<section class="card">
+<h2>🌙 Future Memories</h2>
+<div class="letter"><strong>To our future selves,</strong><br><br>
+Some of my favorite memories with you haven't happened yet.<br><br>
+There are places we haven't visited, pictures we haven't taken, jokes we haven't made and birthdays we haven't celebrated yet.<br><br>
+I hope we keep collecting all of them — one little moment at a time.<br><br>
+<strong>Our story isn't finished. There's still so much more to write. ❤️</strong></div>
+</section>
+
+<section class="card">
+<h2>💌 A Letter For You</h2>
+<div class="letter">Dear Ayushi,<br><br>
+Happy Birthday to someone who has become such a beautiful part of my life.<br><br>
+I don't think one webpage could ever contain everything I want to say, but I wanted to make you something rather than simply buy you something.<br><br>
+29 August 2022 gave me a date to remember. You gave that date meaning.<br><br>
+So today, I hope you smile a lot, laugh a lot, and enjoy every second of your day. And I hope you know that somewhere behind all this code is someone who is genuinely grateful for every memory we've made.<br><br>
+Happy Birthday, Ayushi. ❤️<br><br>
+<strong>Here's to you. Here's to us. And here's to everything still waiting for us.</strong><br><br>
+— Yours ❤️</div>
+</section>
+
+<section class="card secret">
+<h2>🎁 One Last Surprise</h2>
+<p class="muted">There is one final message hidden here.</p>
+<button class="alt" id="secretBtn">Unlock My Secret 🔐</button>
+<div id="secret" class="secretbox hidden"><strong>AYUSHI ❤️</strong><br><br>
+If I had to choose one gift to keep forever, it wouldn't be a thing.<br><br>
+It would be every laugh, every conversation, every picture, every silly moment and every ordinary day that became special because you were there.<br><br>
+<strong>Happy Birthday, my love. ❤️</strong><br><br>
+And yes… I made an entire website for you. So technically, I put some serious effort into your birthday. 😂❤️</div>
+</section>
+<footer>Made with ❤️, a little bit of code, and a lot of love.<br>We met: 29.08.2022 ❤️ &nbsp; | &nbsp; Birthday: 20.09 🎂</footer>
+</main>
+</div>
+<script>
+const open=document.getElementById("open"),story=document.getElementById("story"),secretBtn=document.getElementById("secretBtn"),secret=document.getElementById("secret");
+const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function typeMessage(element,text,speed=35){
+  if(!element){return;}
+  if(reduceMotion){element.textContent=text;return;}
+  element.textContent="";
+  const cursor=document.createElement("span");
+  cursor.className="cursor";
+  element.appendChild(cursor);
+  let i=0;
+  const timer=setInterval(()=>{
+    if(i<text.length){cursor.before(document.createTextNode(text[i++]));}
+    else{clearInterval(timer);setTimeout(()=>cursor.remove(),1200);}
+  },speed);
+}
+function spawnHeart(){
+  if(reduceMotion)return;
+  const h=document.createElement("div");
+  h.className="floating-heart";
+  h.textContent=["❤","♡","💗","💖"][Math.floor(Math.random()*4)];
+  h.style.left=`${Math.random()*100}vw`;
+  h.style.setProperty("--drift",`${Math.random()*160-80}px`);
+  h.style.fontSize=`${18+Math.random()*18}px`;
+  h.style.animationDuration=`${4+Math.random()*3}s`;
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),8000);
+}
+function confettiBurst(count=55){
+  if(reduceMotion)return;
+  for(let i=0;i<count;i++){
+    const c=document.createElement("div");
+    c.className="confetti";
+    c.style.left=`${Math.random()*100}vw`;
+    c.style.background=`hsl(${Math.random()*360},80%,65%)`;
+    c.style.animationDuration=`${2+Math.random()*2.2}s`;
+    c.style.animationDelay=`${Math.random()*.35}s`;
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),5000);
+  }
+}
+function setupReveal(){
+  const cards=[...story.querySelectorAll(".card")];
+  if(reduceMotion){cards.forEach(c=>c.classList.add("visible"));return;}
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}
+    });
+  },{threshold:.14});
+  cards.forEach(card=>observer.observe(card));
+}
+open.addEventListener("click",()=>{
+  story.classList.remove("hidden");
+  open.textContent="Our story begins ❤️";
+  open.disabled=true;
+  setupReveal();
+  story.scrollIntoView({behavior:reduceMotion?"auto":"smooth"});
+  typeMessage(story.querySelector(".card:first-child .muted"),"Our story began on 29 August 2022. 29 August 2022 was the day we met for the first time. From that first meeting came countless little moments that became our story.");
+  confettiBurst();
+  for(let i=0;i<5;i++)setTimeout(spawnHeart,i*280);
+});
+secretBtn.addEventListener("click",()=>{
+  const wasHidden=secret.classList.contains("hidden");
+  secret.classList.toggle("hidden");
+  secretBtn.textContent=wasHidden?"Hide My Secret ❤️":"Unlock My Secret 🔐";
+  if(wasHidden){
+    confettiBurst(75);
+    for(let i=0;i<8;i++)setTimeout(spawnHeart,i*180);
+  }
+});
+if(!reduceMotion){
+  setInterval(()=>{if(!document.hidden&&!story.classList.contains("hidden"))spawnHeart();},1800);
+}
+</script>
+
+<script>
+(function(){
+ const hero=document.querySelector('.hero-inner');
+ if(!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+ const move=(x,y)=>{const r=hero.getBoundingClientRect(),dx=(x-(r.left+r.width/2))/r.width,dy=(y-(r.top+r.height/2))/r.height;hero.style.transform=`rotateX(${(-dy*5).toFixed(2)}deg) rotateY(${(dx*7).toFixed(2)}deg) translateZ(8px)`};
+ window.addEventListener('mousemove',e=>move(e.clientX,e.clientY),{passive:true});
+ window.addEventListener('mouseleave',()=>hero.style.transform='');
+ window.addEventListener('touchmove',e=>{if(e.touches[0])move(e.touches[0].clientX,e.touches[0].clientY)},{passive:true});
+})();
+
+const memoryData = [
+  {title:"Our favorite photo", label:"Our favorite photo", hint:"Replace this with your first picture ❤️", text:"The first picture in our little collection of memories."},
+  {title:"A beautiful memory", label:"A beautiful memory", hint:"A moment you never want to forget ✨", text:"One of those moments that makes you smile whenever you remember it."},
+  {title:"That special day", label:"That special day", hint:"Your special day together 💗", text:"A memory that deserves a place in our story forever."},
+  {title:"Our funniest picture", label:"Our funniest picture", hint:"The photo that still makes you laugh 😂", text:"Proof that some of our best memories are the completely silly ones."},
+  {title:"A random favorite", label:"A random favorite", hint:"Sometimes the random moments matter most 🌙", text:"Just an ordinary moment that somehow became one of your favorites."},
+  {title:"One for the future", label:"One for the future", hint:"Leave this one for a memory you haven't made yet ❤️", text:"Because some of the best pictures of us are still waiting to be taken."}
+];
+
+const memoryFrame = document.getElementById("memoryStage")?.querySelector(".memory-frame");
+const memoryPlaceholder = document.getElementById("memoryPlaceholder");
+const memoryLabel = document.getElementById("memoryLabel");
+const memoryHint = document.getElementById("memoryHint");
+const memoryTitle = document.getElementById("memoryTitle");
+const memoryText = document.getElementById("memoryText");
+const memoryCount = document.getElementById("memoryCount");
+const memoryDots = document.getElementById("memoryDots");
+const memoryPrev = document.getElementById("memoryPrev");
+const memoryNext = document.getElementById("memoryNext");
+
+let memoryIndex = 0;
+
+function buildMemoryDots(){
+  if(!memoryDots) return;
+  memoryData.forEach((_,i)=>{
+    const dot=document.createElement("button");
+    dot.type="button";
+    dot.className="memory-dot" + (i===0 ? " active" : "");
+    dot.setAttribute("aria-label",`Show memory ${i+1}`);
+    dot.addEventListener("click",()=>showMemory(i,i>memoryIndex?"next":"prev"));
+    memoryDots.appendChild(dot);
+  });
+}
+
+function showMemory(index,direction="next"){
+  if(!memoryFrame) return;
+  memoryIndex=(index+memoryData.length)%memoryData.length;
+  const item=memoryData[memoryIndex];
+
+  memoryFrame.classList.remove("slide-next","slide-prev");
+  void memoryFrame.offsetWidth;
+  memoryFrame.classList.add(direction==="prev"?"slide-prev":"slide-next");
+
+  memoryLabel.textContent=item.label;
+  memoryHint.textContent=item.hint;
+  memoryTitle.textContent=item.title;
+  memoryText.textContent=item.text;
+  memoryCount.textContent=`${String(memoryIndex+1).padStart(2,"0")} / ${String(memoryData.length).padStart(2,"0")}`;
+
+  [...memoryDots.children].forEach((dot,i)=>dot.classList.toggle("active",i===memoryIndex));
+}
+
+buildMemoryDots();
+memoryPrev?.addEventListener("click",()=>showMemory(memoryIndex-1,"prev"));
+memoryNext?.addEventListener("click",()=>showMemory(memoryIndex+1,"next"));
+
+let touchStartX=null;
+memoryPlaceholder?.addEventListener("pointerdown",(e)=>{touchStartX=e.clientX;});
+memoryPlaceholder?.addEventListener("pointerup",(e)=>{
+  if(touchStartX===null)return;
+  const dx=e.clientX-touchStartX;
+  if(Math.abs(dx)>45) showMemory(memoryIndex+(dx<0?1:-1),dx<0?"next":"prev");
+  touchStartX=null;
+});
+
+</script>
+</body>
+</html>
